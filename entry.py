@@ -27,17 +27,19 @@ def save_json_object(data):
         json.dump(entries, file, indent=4)
 
 def main():
-    print("Welcome to Entry Object Creator!")
+    print("Welcome to Entry Creator!")
     while True:
         data = create_json_object()
         save_json_object(data)
         print("Entry object created and saved.")
 
-        choice = input("Do you want to create another Entry object? (yes/no): ").lower()
-        if choice != 'yes':
+        choice = input("Do you want to create another entry (yes/no): ").lower()
+        if choice == 'yes' or choice == 'y':
+            continue
+        else:
             break
 
-    print("Thank you for using Entry Object Creator!")
+    print("Thank you for using Entry Creator!")
 
 if __name__ == "__main__":
     main()
